@@ -1,0 +1,11 @@
+#!/bin/bash
+
+
+year=$(date +"%Y")
+dir=/home/charlie/Archives-0001/Library/Imagery/Personal/Screenshots/
+
+[[ -d $dir/$year ]] || mkdir $year
+flameshot &
+flameshot gui -r -p $dir/$year | xclip -sel c -t image/png
+pkill flameshot
+
