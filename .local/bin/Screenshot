@@ -2,7 +2,7 @@
 
 
 year=$(date +"%Y")
-dir=/home/charlie/Archives-0001/Library/Imagery/Personal/Screenshots/
+dir=~/Screenshots
 
 [[ -d $dir/$year ]] || mkdir $year
 flameshot &
